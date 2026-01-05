@@ -6,7 +6,7 @@ const getAllNotes = async (req, res) => {
         );;
         res.json(rows);
     } catch (error) {
-        console.error(err);
+        console.error(error);
         res.status(500).json({ message: "DB error" });
     }
 }
