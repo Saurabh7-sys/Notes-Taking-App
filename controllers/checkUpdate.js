@@ -2,7 +2,9 @@ const LATEST_VERSION = 11;
 const APK_URL = "https://notes-taking-app-283p.onrender.com/apk/locApp-release.apk";
 
 const checkUpdate = (req, res) => {
-  const { versionCode } = req.body;
+  // const { versionCode } = req.body;
+  const versionCode = Number(req.body.versionCode);
+
 
   if (typeof versionCode !== "number") {
     return res.status(400).json({
