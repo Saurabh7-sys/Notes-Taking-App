@@ -3,6 +3,7 @@ const router = require('./routes/route')
 const cors = require('cors');
 const app = express();
 const db = require('./data/db');
+const path = require('path');
 app.use(cors());
 app.use(express.json());
 
@@ -19,6 +20,7 @@ app.use('/db-connection', async (req, res) => {
     }
 });
 
+app.use('/apk' , express.static(path.join(__dirname , 'apk')));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
