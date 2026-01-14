@@ -1,5 +1,5 @@
 const LATEST_VERSION = 2;
-const APK_URL = "https://yourdomain.com/apk/locApp-release.apk";
+const APK_URL = "https://notes-taking-app-283p.onrender.com/apk/locApp-release.apk";
 
 const checkUpdate = (req, res) => {
   const { versionCode } = req.body;
